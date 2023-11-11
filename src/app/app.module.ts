@@ -11,6 +11,9 @@ import { BasketComponent } from './components/basket/basket.component';
 import { MainComponent } from './components/main/main.component';
 import { DialogBoxComponent } from './components/UI/dialog-box/dialog-box.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import {AppRoutingModule} from "./app-routing.module";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
