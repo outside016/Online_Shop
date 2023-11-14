@@ -9,7 +9,13 @@
 .example-card{
   background-color: #ffffff;
   color: black;
+
+  &__title{
+    margin-top: 0.625rem;
+    margin-left: 0.625rem;
+  }
 }
+
 .image{
   max-width: 300px;
 }

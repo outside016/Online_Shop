@@ -6,12 +6,12 @@
   display: flex;
   align-items: center;
 
-  &.button{
+  &__button{
     margin-left: 5px;
 
-    &:first-child{
-      margin-left: 0;
-    }
+  }
+  &__button:first-child{
+    margin-left: 0;
   }
 
 }
