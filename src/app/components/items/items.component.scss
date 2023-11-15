@@ -9,10 +9,14 @@
 .example-card{
   background-color: #ffffff;
   color: black;
+  margin-right: 0.625rem;
 
   &__title{
     margin-top: 0.625rem;
     margin-left: 0.625rem;
+  }
+  &:last-child{
+    margin-right: 0;
   }
 }
 
