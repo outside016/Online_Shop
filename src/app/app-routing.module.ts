@@ -5,11 +5,12 @@ import {MainComponent} from "./components/main/main.component";
 import {ItemsComponent} from "./components/items/items.component";
 import {ItemsDetailsComponent} from "./components/items-details/items-details.component";
 import {BasketComponent} from "./components/basket/basket.component";
+import {ItemsResolver} from "./services/items.resolver";
 
 const routes:Routes = [
   {path:'',component: MainComponent},
   {path:'items', component: ItemsComponent},
-  {path:'items/:id', component: ItemsDetailsComponent},
+  {path:'items/:id', component: ItemsDetailsComponent, resolve: {data: ItemsResolver}},
   {path:'basket', component: BasketComponent},
 
   {path:'**', component: MainComponent}
