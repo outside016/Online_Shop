@@ -1,0 +1,30 @@
+.container{
+  margin: 0 auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.example-card{
+  margin-top: 7rem;
+  background-color: #ffffff;
+  color: black;
+  margin-right: 0.625rem;
+  scale: 1.5;
+
+  &__title{
+    margin-top: 0.625rem;
+    margin-left: 0.625rem;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.image{
+  max-width: 300px;
+}
+.button{
+  margin-right: 5px;
+}

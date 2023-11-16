@@ -11,11 +11,16 @@ import {ItemsService} from "../../services/items.service";
 export class ItemsComponent implements OnInit{
 
   items!: Items[];
+  canEdit: boolean = false;
+  canView: boolean = true;
 
   itemsSubscriprion!: Subscription;
   constructor(private ItemsService: ItemsService) {
   }
   ngOnInit() {
+
+    this.canEdit = true
+
     this.itemsSubscriprion = this.ItemsService.getItems().subscribe((data)=>
     this.items = data)
   }
