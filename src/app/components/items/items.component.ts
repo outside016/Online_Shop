@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Items} from "../../models/items";
 import {Subscription} from "rxjs";
 import {ItemsService} from "../../services/items.service";
@@ -8,7 +8,7 @@ import {ItemsService} from "../../services/items.service";
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.scss']
 })
-export class ItemsComponent implements OnInit{
+export class ItemsComponent implements OnInit, OnDestroy {
 
   items!: Items[];
   canEdit: boolean = false;

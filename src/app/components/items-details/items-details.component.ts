@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Items} from "../../models/items";
 import {Subscription} from "rxjs";
@@ -8,7 +8,7 @@ import {Subscription} from "rxjs";
   templateUrl: './items-details.component.html',
   styleUrls: ['./items-details.component.scss']
 })
-export class ItemsDetailsComponent implements OnInit{
+export class ItemsDetailsComponent implements OnInit, OnDestroy {
 
   constructor(private route: ActivatedRoute) {
   }
