@@ -2,6 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Items} from "../../models/items";
 import {Subscription} from "rxjs";
 import {ItemsService} from "../../services/items.service";
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {DialogBoxComponent} from "../UI/dialog-box/dialog-box.component";
 
 @Component({
   selector: 'app-items',
@@ -15,7 +17,7 @@ export class ItemsComponent implements OnInit, OnDestroy {
   canView: boolean = true;
 
   itemsSubscriprion!: Subscription;
-  constructor(private ItemsService: ItemsService) {
+  constructor(private ItemsService: ItemsService,public dialog: MatDialog) {
   }
   ngOnInit() {
 
@@ -24,6 +26,15 @@ export class ItemsComponent implements OnInit, OnDestroy {
     this.itemsSubscriprion = this.ItemsService.getItems().subscribe((data)=>
     this.items = data)
   }
+
+  openDialog(): void {
+    let dialogConfig = new MatDialogConfig();
+
+    const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig);
+  }
+
+
+
 
   ngOnDestroy(){
     if (this.itemsSubscriprion) this.itemsSubscriprion.unsubscribe()

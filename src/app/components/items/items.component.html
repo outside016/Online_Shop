@@ -3,7 +3,7 @@
   <mat-toolbar color="primary" *ngIf="canEdit">
     <mat-toolbar-row>
       <span class="example-spacer"></span>
-      <button class="button" mat-flat-button >Добавить товар</button>
+      <button class="button" mat-flat-button (click)="openDialog()" >Добавить товар</button>
     </mat-toolbar-row>
   </mat-toolbar>
 
