@@ -1,10 +1,18 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width" [formGroup]="myForm" (ngSubmit)="onSubmit">
-    <mat-label>Favorite food</mat-label>
+<form class="example-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Название товара</mat-label>
     <input matInput formControlName="title">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Цена</mat-label>
+    <input matInput formControlName="price">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Год</mat-label>
+    <input matInput formControlName="year">
   </mat-form-field>
   <div class="toolbar">
     <button class="toolbar__button" mat-flat-button color="primary" type="submit">Добавить товар</button>
-    <button class="toolbar__button" mat-flat-button color="primary">Отмена</button>
+    <button class="toolbar__button" mat-flat-button color="primary" (click)="onNoClick()">Отмена</button>
   </div>
 </form>

@@ -29,7 +29,7 @@ export class ItemsComponent implements OnInit, OnDestroy {
 
   openDialog(): void {
     let dialogConfig = new MatDialogConfig();
-
+    dialogConfig.disableClose = true
     const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig);
   }
 

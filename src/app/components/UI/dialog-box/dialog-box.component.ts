@@ -25,10 +25,8 @@ export class DialogBoxComponent {
   }
 
   onSubmit(): void {
-    console.log(this.data);
+    console.log(this.myForm);
   }
 
 
-
-  protected readonly onsubmit = onsubmit;
 }
