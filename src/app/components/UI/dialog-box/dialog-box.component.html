@@ -1,7 +1,10 @@
 <form class="example-form">
-    <mat-form-field class="example-full-width">
-        <mat-label>Favorite food</mat-label>
-        <input matInput placeholder="Ex. Pizza" value="Sushi">
-    </mat-form-field>
-
+  <mat-form-field class="example-full-width" [formGroup]="myForm" (ngSubmit)="onSubmit">
+    <mat-label>Favorite food</mat-label>
+    <input matInput formControlName="title">
+  </mat-form-field>
+  <div class="toolbar">
+    <button class="toolbar__button" mat-flat-button color="primary" type="submit">Добавить товар</button>
+    <button class="toolbar__button" mat-flat-button color="primary">Отмена</button>
+  </div>
 </form>

@@ -7,3 +7,18 @@
 .example-full-width {
   width: 100%;
 }
+
+.toolbar {
+width: 400px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+
+  &__button {
+
+  }
+
+  &__button:first-child {
+    margin-left: 0;
+  }
+}

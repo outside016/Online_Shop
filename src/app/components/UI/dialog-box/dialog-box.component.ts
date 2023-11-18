@@ -1,5 +1,6 @@
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {FormControl, FormGroup, FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-dialog-box',
@@ -7,6 +8,12 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
   styleUrls: ['./dialog-box.component.scss']
 })
 export class DialogBoxComponent {
+
+  myForm: FormGroup  = new FormGroup<any>({
+    title: new FormControl(''),
+    price: new FormControl(''),
+    year: new FormControl('')
+  })
 
   constructor(
     public dialogRef: MatDialogRef<DialogBoxComponent>,
@@ -17,5 +24,11 @@ export class DialogBoxComponent {
     this.dialogRef.close();
   }
 
+  onSubmit(): void {
+    console.log(this.data);
+  }
 
+
+
+  protected readonly onsubmit = onsubmit;
 }
