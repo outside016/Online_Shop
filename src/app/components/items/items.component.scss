@@ -1,5 +1,5 @@
 .container{
-  margin: 0 auto 0;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -13,14 +13,11 @@
 .example-card{
   background-color: #ffffff;
   color: black;
-  margin-right: 0.625rem;
+  margin: 1rem 1rem 4rem 1rem;
 
   &__title{
     margin-top: 0.625rem;
     margin-left: 0.625rem;
-  }
-  &:last-child{
-    margin-right: 0;
   }
 }
 

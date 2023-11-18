@@ -19,4 +19,8 @@ getItem(id:number){
    return this.http.get<Items[]>(`${this.url}/${id}`)
 }
 
+postItem(item: Items){
+  return this.http.post<Items>(this.url, item)
+}
+
 }

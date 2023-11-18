@@ -24,8 +24,15 @@ export class DialogBoxComponent {
     this.dialogRef.close();
   }
 
-  onSubmit(): void {
-    console.log(this.myForm);
+  onSubmit(){
+    this.data={
+      title: this.myForm.value.title,
+      price: this.myForm.value.price,
+      year: this.myForm.value.year,
+      image: "assets/images/Apple Watch SE (2-го поколения).jpg"
+    }
+
+    this.dialogRef.close(this.data)
   }
 
 
