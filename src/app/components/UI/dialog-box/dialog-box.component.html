@@ -12,7 +12,9 @@
     <input matInput formControlName="year">
   </mat-form-field>
   <div class="toolbar">
-    <button class="toolbar__button" mat-flat-button color="primary" type="submit">Добавить товар</button>
+    <button class="toolbar__button" mat-flat-button color="primary" type="submit">
+      {{ isNew ? 'Добавить товар' : 'Обновить'}}
+    </button>
     <button class="toolbar__button" mat-flat-button color="primary" (click)="onNoClick()" type="button">Отмена</button>
   </div>
 </form>

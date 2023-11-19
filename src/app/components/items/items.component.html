@@ -20,7 +20,7 @@
       <button class="button" mat-flat-button [matMenuTriggerFor]="menu" color="primary">Ред.</button>
       <mat-menu #menu="matMenu">
         <button class="button" mat-menu-item (click)="deleteItem(item.id)">Удалить</button>
-        <button class="button" mat-menu-item >Редактировать</button>
+        <button class="button" mat-menu-item (click)="openDialog(item)">Редактировать</button>
       </mat-menu>
 
     </mat-card-actions>

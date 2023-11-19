@@ -29,20 +29,25 @@ export class ItemsComponent implements OnInit, OnDestroy {
       this.items = data)
   }
 
-  openDialog(): void {
+  openDialog(item?: Items): void {
     let dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true
+    dialogConfig.data = item
     const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe((data) => {
-      if (data){
-        this.postData(data)
-      } 
+
+      if (data) {
+
+        if (data && data.id) {
+          this.updateItem(data)
+        } else
+          this.postData(data)
+      }
     })
   }
 
   postData(data: Items) {
-    console.log(data)
     this.ItemsService.postItem(data).subscribe((data) => this.items.push(data))
   }
 
@@ -60,4 +65,15 @@ export class ItemsComponent implements OnInit, OnDestroy {
     })
    )
   }
+
+  updateItem(item: Items){
+    this.ItemsService.updateItem(item).subscribe((data)=>{
+      this.items = this.items.map((item)=> {
+        if (item.id === data.id) return data
+        else return item
+      })
+
+    })
+  }
+
 }

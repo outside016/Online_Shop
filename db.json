@@ -29,11 +29,11 @@
       "year": 2022
     },
     {
-      "title": "sdasda",
-      "price": "123",
-      "year": "123",
-      "image": "assets/images/Apple Watch SE (2-го поколения).jpg",
-      "id": 6
+      "id": 6,
+      "title": "asddsa",
+      "price": "2222",
+      "year": "2023",
+      "image": "assets/images/Apple Watch SE (2-го поколения).jpg"
     }
   ]
 }

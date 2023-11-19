@@ -9,23 +9,30 @@ import {FormControl, FormGroup, FormsModule} from "@angular/forms";
 })
 export class DialogBoxComponent {
 
-  myForm: FormGroup  = new FormGroup<any>({
-    title: new FormControl(''),
-    price: new FormControl(''),
-    year: new FormControl('')
-  })
-
   constructor(
     public dialogRef: MatDialogRef<DialogBoxComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-  ) {}
+  ) {
+    if (this.data) this.isNew = false
+  }
+
+  isNew: boolean = true;
+
+  myForm: FormGroup  = new FormGroup<any>({
+    id: new FormControl(this.data?.id ?? null),
+    title: new FormControl(this.data?.title ?? null),
+    price: new FormControl(this.data?.price ?? null),
+    year: new FormControl(this.data?.year ?? null)
+  })
+
 
   onNoClick(): void {
-    this.dialogRef.close(null);
+    this.dialogRef.close();
   }
 
   onSubmit(){
     this.data={
+      id: this.myForm.value.id,
       title: this.myForm.value.title,
       price: this.myForm.value.price,
       year: this.myForm.value.year,

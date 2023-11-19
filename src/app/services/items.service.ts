@@ -27,5 +27,9 @@ deleteItem(id:number){
     return this.http.delete<any>(`${this.url}/${id}`)
 }
 
+updateItem(item:Items){
+    return this.http.put<Items>(`${this.url}/${item.id}`,item)
+}
+
 
 }
