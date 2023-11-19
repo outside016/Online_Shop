@@ -22,18 +22,18 @@
       "year": 2022
     },
     {
-      "id": 4,
-      "title": "Apple Watch Series 8",
-      "price": 399,
-      "image": "assets/images/Apple Watch Series 8.png",
-      "year": 2022
-    },
-    {
       "id": 5,
       "title": "Apple Watch SE 2",
       "price": 249,
       "image": "assets/images/Apple Watch SE (2-го поколения).jpg",
       "year": 2022
+    },
+    {
+      "title": "sdasda",
+      "price": "123",
+      "year": "123",
+      "image": "assets/images/Apple Watch SE (2-го поколения).jpg",
+      "id": 6
     }
   ]
 }

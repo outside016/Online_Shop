@@ -34,7 +34,11 @@ export class ItemsComponent implements OnInit, OnDestroy {
     dialogConfig.disableClose = true
     const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig);
 
-    dialogRef.afterClosed().subscribe((data) => this.postData(data))
+    dialogRef.afterClosed().subscribe((data) => {
+      if (data){
+        this.postData(data)
+      } 
+    })
   }
 
   postData(data: Items) {
@@ -45,5 +49,15 @@ export class ItemsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     if (this.itemsSubscriprion) this.itemsSubscriprion.unsubscribe()
+  }
+
+  deleteItem(id: number) {
+   this.ItemsService.deleteItem(id).subscribe(()=> this.items.find((item)=>{
+     if (id === item.id){
+       let idx = this.items.findIndex((data)=> id === data.id)
+       this.items.splice(idx,1)
+     }
+    })
+   )
   }
 }

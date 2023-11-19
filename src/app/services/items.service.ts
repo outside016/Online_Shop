@@ -23,4 +23,9 @@ postItem(item: Items){
   return this.http.post<Items>(this.url, item)
 }
 
+deleteItem(id:number){
+    return this.http.delete<any>(`${this.url}/${id}`)
+}
+
+
 }
