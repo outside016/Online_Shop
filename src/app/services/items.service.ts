@@ -8,8 +8,9 @@ import {Items} from "../models/items";
 export class ItemsService{
 
   url: string = "http://localhost:3000/items"
+  urlBasket: string = "http://localhost:3000/basket"
 
-constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) {
 }
 getItems(){
  return this.http.get<Items[]>(this.url)
@@ -31,5 +32,8 @@ updateItem(item:Items){
     return this.http.put<Items>(`${this.url}/${item.id}`,item)
 }
 
+  postItemToBasket(item: Items){
+    return this.http.post<Items>(this.urlBasket, item)
+  }
 
 }

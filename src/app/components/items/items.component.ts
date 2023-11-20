@@ -11,6 +11,9 @@ import {DialogBoxComponent} from "../UI/dialog-box/dialog-box.component";
   styleUrls: ['./items.component.scss']
 })
 export class ItemsComponent implements OnInit, OnDestroy {
+  constructor(private ItemsService: ItemsService, public dialog: MatDialog) {
+  }
+
 
   items!: Items[];
   canEdit: boolean = false;
@@ -18,8 +21,6 @@ export class ItemsComponent implements OnInit, OnDestroy {
 
   itemsSubscriprion!: Subscription;
 
-  constructor(private ItemsService: ItemsService, public dialog: MatDialog) {
-  }
 
   ngOnInit() {
 
@@ -74,6 +75,10 @@ export class ItemsComponent implements OnInit, OnDestroy {
       })
 
     })
+  }
+
+  addToBasket(item:Items){
+  this.ItemsService.postItemToBasket(item).subscribe((data)=>{console.log(data)})
   }
 
 }
