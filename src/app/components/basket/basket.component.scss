@@ -1,0 +1,33 @@
+.container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-card{
+  margin-top: 7rem;
+  background-color: #ffffff;
+  color: black;
+  margin-right: 0.625rem;
+
+  &__title{
+    margin-top: 0.625rem;
+    margin-left: 0.625rem;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.image{
+  max-width: 300px;
+}
+.button{
+  margin-right: 5px;
+}

@@ -5,35 +5,40 @@ import {Items} from "../models/items";
 @Injectable({
   providedIn: 'root'
 })
-export class ItemsService{
+export class ItemsService {
 
   url: string = "http://localhost:3000/items"
   urlBasket: string = "http://localhost:3000/basket"
 
   constructor(private http: HttpClient) {
-}
-getItems(){
- return this.http.get<Items[]>(this.url)
-}
+  }
 
-getItem(id:number){
-   return this.http.get<Items[]>(`${this.url}/${id}`)
-}
+  getItems() {
+    return this.http.get<Items[]>(this.url)
+  }
 
-postItem(item: Items){
-  return this.http.post<Items>(this.url, item)
-}
+  getItem(id: number) {
+    return this.http.get<Items[]>(`${this.url}/${id}`)
+  }
 
-deleteItem(id:number){
+  postItem(item: Items) {
+    return this.http.post<Items>(this.url, item)
+  }
+
+  deleteItem(id: number) {
     return this.http.delete<any>(`${this.url}/${id}`)
-}
+  }
 
-updateItem(item:Items){
-    return this.http.put<Items>(`${this.url}/${item.id}`,item)
-}
+  updateItem(item: Items) {
+    return this.http.put<Items>(`${this.url}/${item.id}`, item)
+  }
 
-  postItemToBasket(item: Items){
+  postItemToBasket(item: Items) {
     return this.http.post<Items>(this.urlBasket, item)
+  }
+
+  getItemsFromBasket() {
+    return this.http.get<Items[]>(this.urlBasket)
   }
 
 }

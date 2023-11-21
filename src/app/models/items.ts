@@ -3,5 +3,6 @@ export interface Items {
   title: string,
   price: number,
   image?: string,
-  year: number
+  year: number,
+  quantity?: number
 }
