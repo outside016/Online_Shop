@@ -10,15 +10,23 @@
   flex: 1 1 auto;
 }
 
+.mat-card-actions__button{
+  display: block;
+  align-items: center;
+  padding-left: 8px;
+}
+.mat-card-actions__text{
+ padding-top: 0.600rem;
+}
 .example-card{
-  margin-top: 7rem;
+  margin-top: 3rem;
   background-color: #ffffff;
   color: black;
   margin-right: 0.625rem;
 
   &__title{
     margin-top: 0.625rem;
-    margin-left: 0.625rem;
+    padding-left: 16px;
   }
   &:last-child{
     margin-right: 0;

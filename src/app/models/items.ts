@@ -4,5 +4,5 @@ export interface Items {
   price: number,
   image?: string,
   year: number,
-  quantity?: number
+  quantity: number
 }

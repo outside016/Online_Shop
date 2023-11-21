@@ -7,8 +7,11 @@
       <p>Year: {{item.year}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button class="button" mat-flat-button color="primary">В Корзину</button>
-      <button class="button" mat-flat-button color="primary" routerLink ="{{item.id}}">Подробнее</button>
+      <div class="mat-card-actions__button">
+      <button class="button" mat-flat-button color="primary">+</button>
+      <p class="mat-card-actions__text">Кол-во: {{item.quantity}}</p>
+      <button class="button" mat-flat-button color="primary">-</button>
+      </div>
     </mat-card-actions>
   </mat-card>
 </div>

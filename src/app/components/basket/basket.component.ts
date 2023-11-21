@@ -14,7 +14,6 @@ export class BasketComponent implements OnInit, OnDestroy {
   }
 
   basket!: Items[];
-
   basketSubscription!: Subscription
 
   ngOnInit() {

@@ -30,5 +30,21 @@
     }
   ],
   "basket": [
+    {
+      "id": 2,
+      "title": "Apple Watch Series 9",
+      "price": 399,
+      "image": "assets/images/Apple Watch Series 9.jpg",
+      "year": 2023,
+      "quantity": 17
+    },
+    {
+      "id": 1,
+      "title": "Apple Watch Ultra 2",
+      "price": 799,
+      "image": "assets/images/Apple Watch Ultra 2.jpg",
+      "year": 2023,
+      "quantity": 4
+    }
   ]
 }

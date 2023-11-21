@@ -41,4 +41,8 @@ export class ItemsService {
     return this.http.get<Items[]>(this.urlBasket)
   }
 
+  updateBasket(item: Items) {
+    return this.http.put<Items>(`${this.urlBasket}/${item.id}`, item)
+  }
+
 }
