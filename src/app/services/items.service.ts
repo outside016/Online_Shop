@@ -45,4 +45,9 @@ export class ItemsService {
     return this.http.put<Items>(`${this.urlBasket}/${item.id}`, item)
   }
 
+  deleteItemFromBasket(id: number) {
+    return this.http.delete<any>(`${this.urlBasket}/${id}`)
+  }
+
+
 }

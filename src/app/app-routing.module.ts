@@ -8,7 +8,7 @@ import {BasketComponent} from "./components/basket/basket.component";
 import {ItemsResolver} from "./services/items.resolver";
 
 const routes:Routes = [
-  {path:'',component: MainComponent},
+  {path:'',component: ItemsComponent},
   {path:'items', component: ItemsComponent},
   {path:'items/:id', component: ItemsDetailsComponent, resolve: {data: ItemsResolver}},
   {path:'basket', component: BasketComponent},

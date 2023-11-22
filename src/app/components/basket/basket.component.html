@@ -8,9 +8,9 @@
     </mat-card-content>
     <mat-card-actions>
       <div class="mat-card-actions__button">
-      <button class="button" mat-flat-button color="primary">+</button>
+      <button class="button" mat-flat-button color="primary" (click)="plusItemFromBasket(item)">+</button>
       <p class="mat-card-actions__text">Кол-во: {{item.quantity}}</p>
-      <button class="button" mat-flat-button color="primary">-</button>
+      <button class="button" mat-flat-button color="primary" (click)="minusItemFromBasket(item)">-</button>
       </div>
     </mat-card-actions>
   </mat-card>

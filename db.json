@@ -27,24 +27,31 @@
       "price": 249,
       "image": "assets/images/Apple Watch SE (2-го поколения).jpg",
       "year": 2022
+    },
+    {
+      "id": 6,
+      "title": "asdasd",
+      "price": "12321",
+      "year": "123123",
+      "image": "assets/images/Apple Watch SE (2-го поколения).jpg"
     }
   ],
   "basket": [
     {
-      "id": 2,
-      "title": "Apple Watch Series 9",
-      "price": 399,
-      "image": "assets/images/Apple Watch Series 9.jpg",
-      "year": 2023,
-      "quantity": 17
+      "id": 3,
+      "title": "Apple Watch Ultra",
+      "price": 799,
+      "image": "assets/images/Apple Watch Ultra.jpeg",
+      "year": 2022,
+      "quantity": 7
     },
     {
-      "id": 1,
-      "title": "Apple Watch Ultra 2",
-      "price": 799,
-      "image": "assets/images/Apple Watch Ultra 2.jpg",
-      "year": 2023,
-      "quantity": 4
+      "id": 6,
+      "title": "asdasd",
+      "price": "12321",
+      "year": "123123",
+      "image": "assets/images/Apple Watch SE (2-го поколения).jpg",
+      "quantity": 9
     }
   ]
 }
